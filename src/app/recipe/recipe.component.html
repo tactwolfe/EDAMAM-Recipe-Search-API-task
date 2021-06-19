@@ -1,0 +1,42 @@
+<div class="recipe">
+
+    <div class="logo-box">
+        <img src="../../assets/images/logo.png" alt="logo" class="recipe__logo">
+    </div>
+    
+    <div class="recipe__holder">
+        <div class="recipe__holder-image-box">
+            <img src="{{recipeData.recipe.image}}" alt="recipe-image" class="recipe__holder-image-box-image">
+            <h2 class="recipe__holder-image-box-text">{{recipeData.recipe.label}}</h2>
+        </div>
+        <div class="recipe__holder-basics">
+            <p class="recipe__holder-basics-text"> <span style="color: red;"> <b>Item name :</b> </span> {{recipeData.recipe.label}}</p>
+            <a href="{{recipeData.recipe.url}}" target="_blank" class="recipe__holder-basics-link">Click Here to Know more about this item..</a>
+            <p class="recipe__holder-basics-text"> <span style="color: red;"> <b> Calories :</b> </span> {{recipeData.recipe.calories}} kcal</p>
+            <p class="recipe__holder-basics-text"> <span style="color: red;"> <b>  Health label :</b></span></p>
+            <span *ngFor= " let h of recipeData.recipe.healthLabels">
+                <li style="display: inline-block;" class="recipe__holder-basics-list">{{h}} &nbsp; </li>
+            </span>
+        </div>
+
+        <div class="recipe__holder-ingredient">
+            <p class="recipe__holder-ingredient-text"> <span style="color: red;"> <b> Ingredient List :</b> </span></p>
+            <div *ngFor="let i of recipeData.recipe.ingredientLines">
+                <li class="recipe__holder-ingredient-list">{{i}}</li>
+            </div>
+        </div>
+
+        <div class="recipe__holder-vitamins">
+            <p class="recipe__holder-vitamins-text"> <span style="color: red;"> <b> Vitamins :</b> </span> </p>
+            <ul>
+                <li class="recipe__holder-vitamins-list">{{recipeData.recipe.totalNutrients.VITA_RAE.label}} : {{recipeData.recipe.totalNutrients.VITA_RAE.quantity}} {{recipeData.recipe.totalNutrients.VITA_RAE.unit}}</li>
+                <li class="recipe__holder-vitamins-list">{{recipeData.recipe.totalNutrients.VITC.label}} : {{recipeData.recipe.totalNutrients.VITC.quantity}} {{recipeData.recipe.totalNutrients.VITC.unit}}</li>
+                <li class="recipe__holder-vitamins-list">{{recipeData.recipe.totalNutrients.VITB6A.label}} : {{recipeData.recipe.totalNutrients.VITB6A.quantity}} {{recipeData.recipe.totalNutrients.VITB6A.unit}}</li>
+                <li class="recipe__holder-vitamins-list">{{recipeData.recipe.totalNutrients.VITB12.label}} : {{recipeData.recipe.totalNutrients.VITB12.quantity}} {{recipeData.recipe.totalNutrients.VITB12.unit}}</li>
+                <li class="recipe__holder-vitamins-list">{{recipeData.recipe.totalNutrients.VITD.label}} : {{recipeData.recipe.totalNutrients.VITD.quantity}} {{recipeData.recipe.totalNutrients.VITD.unit}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>

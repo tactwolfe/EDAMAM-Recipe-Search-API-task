@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans+Condensed:wght@300&display=swap');
+.search{
+    min-height: 20vh;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+
+    &__logo{
+        flex: 1;
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+    }
+
+    &__input{
+        width: 93%;
+        padding: 1rem;
+        border: none;
+        border-bottom: 1px solid rgb(71, 91, 204);
+        font-family: 'Merriweather', serif;
+        text-align: center;
+
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid red;
+        }
+    }
+
+    &__form{
+        flex: 9;
+        padding: 6vh 2rem 6vh 2rem;
+    }
+
+    &__button{
+        border: none;
+        padding: 1rem;
+        background-color: black;
+        color: white;
+        margin-left: 2rem;
+        border-radius: 10px;
+
+        &:hover{
+            background-color: red;                               
+        }
+    }
+}
+
+.food__card{
+    min-height: 80vh;
+    width: 100%;
+    display: grid;
+    padding: 2rem 10rem 0 10rem;
+    grid-template-columns: repeat(auto-fit,minmax(200px,300px));
+    grid-template-rows: repeat(2,50vh);
+    grid-auto-rows: 50vh;
+    gap: 20px;
+
+    // &__illustration{
+    //     grid-row: 1/-1;
+    //     grid-column: 1/-1;
+    //     padding: 10rem 25rem 0 25rem;
+    // }
+}

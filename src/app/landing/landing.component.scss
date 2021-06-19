@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans+Condensed:wght@300&display=swap');
+
+.landing{
+    background-image: url(../../assets/images/landing_image.webp);
+    background-size: cover;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    width: 100%;
+
+    &__holder{
+       background-color: rgba(255, 255, 255, 0.747);
+       min-height: 90vh;
+       width: 95%;
+       border-radius: 30px;
+       overflow: hidden;
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows: 48vh 2vh 48vh;
+       position: relative;
+
+       &__img{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        padding: 4rem;
+    }
+    }
+
+    &__logo{
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__intro{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        &-text{
+            padding: 8rem 8rem 3rem 8rem;
+            font-family: 'Merriweather', serif;
+            font-size: 40px;
+        }
+
+        &-button{
+            background-color: rgb(71, 91, 204);
+            color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            position: absolute;
+            left: 8rem;
+            top: 41vh;
+            transition: all .2s;
+            cursor: pointer;
+
+
+            &:hover{
+                background-color: rgb(157, 226, 53);
+                color: black;
+                transform: translateY(-3px);
+            }
+
+            &:active{
+                background-color: rgb(71, 91, 204);
+                color: white; 
+                transform: translateY(-1px);
+            }
+        }
+    }
+
+    &__foot{
+        text-align: center;
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        font-family: 'Open Sans Condensed';
+        font-weight: bold;
+        margin-top: 7rem;
+        color: rgb(106, 85, 223);
+    }
+
+    &__motto{
+        margin-top: 15rem;
+        grid-row: 3/4;
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        &-box{
+            flex: 1;
+            height: 70%;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+        
+        &-image{
+            border-radius: 50%;
+            height: 10rem;
+            width: 10rem;
+        }
+
+        &-text{
+            font-family: 'Open Sans Condensed';
+            font-weight: bold;
+        }
+
+
+    }
+    
+
+
+}
