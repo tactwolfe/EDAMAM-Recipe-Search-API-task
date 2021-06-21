@@ -1,6 +1,9 @@
+<!-- our card component that holds our recipe cards -->
 <div class="card">
     <div class="card_box">
         <img src="{{url}}" alt="recipe image" class="card__image">
+    </div>
+    <div class="card__name-box">
         <p class="card__name">{{name}}</p>
     </div>
     <button class="card__button" routerLink='/recipe/{{name}}'>Click for Recipe</button>

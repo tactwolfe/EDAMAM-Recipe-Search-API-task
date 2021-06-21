@@ -1,3 +1,4 @@
+<!-- our top nav component with search bar to fetch queried food recipe from the api -->
 <nav class="search">
     <img src="../../assets/images/logo.png" alt="logo" class="search__logo">
     <form class="search__form">
@@ -5,6 +6,8 @@
         <button type="submit" class="search__button" (click)="fetchRecipe()"> Search </button>
     </form>
 </nav>
+
+<!-- this div holds all our food recipe cards -->
 <div class="food__card" >
         <app-card *ngFor="let recipe of RecipeData" [url]="recipe.recipe.image" [name]="recipe.recipe.label"></app-card>
 </div>

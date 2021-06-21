@@ -1,14 +1,19 @@
+<!-- component that shows detailed recipe of selected food item -->
 <div class="recipe">
 
+    <!-- shows our site logo -->
     <div class="logo-box">
         <img src="../../assets/images/logo.png" alt="logo" class="recipe__logo">
     </div>
     
     <div class="recipe__holder">
+         <!-- shows food item image -->
         <div class="recipe__holder-image-box">
             <img src="{{recipeData.recipe.image}}" alt="recipe-image" class="recipe__holder-image-box-image">
             <h2 class="recipe__holder-image-box-text">{{recipeData.recipe.label}}</h2>
         </div>
+
+        <!-- shows the basic info of the item -->
         <div class="recipe__holder-basics">
             <p class="recipe__holder-basics-text"> <span style="color: red;"> <b>Item name :</b> </span> {{recipeData.recipe.label}}</p>
             <a href="{{recipeData.recipe.url}}" target="_blank" class="recipe__holder-basics-link">Click Here to Know more about this item..</a>
@@ -19,6 +24,7 @@
             </span>
         </div>
 
+        <!-- shows list of ingredients -->
         <div class="recipe__holder-ingredient">
             <p class="recipe__holder-ingredient-text"> <span style="color: red;"> <b> Ingredient List :</b> </span></p>
             <div *ngFor="let i of recipeData.recipe.ingredientLines">
@@ -26,6 +32,7 @@
             </div>
         </div>
 
+        <!-- shows list of vitamins -->
         <div class="recipe__holder-vitamins">
             <p class="recipe__holder-vitamins-text"> <span style="color: red;"> <b> Vitamins :</b> </span> </p>
             <ul>
